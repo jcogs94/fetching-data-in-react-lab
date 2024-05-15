@@ -18,7 +18,7 @@ const App = () => {
   return <>
     <h1>Starwars API</h1>
     <StarshipSearch />
-    <StarshipList {...starshipList} />
+    <StarshipList count={starshipList.count} starships={starshipList.results} />
   </>
 }
 
