@@ -13,7 +13,6 @@ const index = async () => {
         while (hasMorePages) {
             const res = await fetch(currentURL)
             let data = await res.json()
-
             
             allData.count = data.count
             allData.results = [...allData.results, ...data.results]
@@ -26,8 +25,8 @@ const index = async () => {
         }
         
         return allData
-    } catch (err) {
-        console.log(err)
+    } catch (error) {
+        console.error(error)
     }
 }
 
@@ -46,7 +45,6 @@ const search = async (searchTerm) => {
         while (hasMorePages) {
             const res = await fetch(currentURL)
             let data = await res.json()
-
             
             allData.count = data.count
             allData.results = [...allData.results, ...data.results]

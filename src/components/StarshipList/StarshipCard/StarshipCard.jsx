@@ -1,13 +1,11 @@
 const StarshipCard = ({ name, sClass, manufacturer, model }) => {
     return <>
-        <div className="starship-card">
+        <li className="starship-card">
             <h4>{name}</h4>
-            <ul>
-                <li>Class: {sClass}</li>
-                <li>Manufacturer: {manufacturer}</li>
-                <li>Model: {model}</li>
-            </ul>
-        </div>
+            <p><b>Class:</b> {sClass}</p>
+            <p><b>Manufacturer:</b> {manufacturer}</p>
+            <p><b>Model:</b> {model}</p>
+        </li>
     </>
 }
 
