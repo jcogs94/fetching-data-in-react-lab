@@ -1,6 +1,6 @@
-const StarshipSearch = ({ handleChange, handleSubmit }) => {
+const Search = ({ handleChange, handleSubmit }) => {
     return <>
-        <div id="starship-search">
+        <div id="search">
             <h3>Search</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="searchTerm">Search Term:</label>
@@ -11,4 +11,4 @@ const StarshipSearch = ({ handleChange, handleSubmit }) => {
     </>
 }
 
-export default StarshipSearch
+export default Search

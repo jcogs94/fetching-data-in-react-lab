@@ -1,10 +1,10 @@
-const BASE_URL = 'https://swapi.dev/api/starships/'
+const BASE_URL = 'https://swapi.dev/api/'
 
-const index = async () => {
+const index = async (type) => {
     try {
         let hasMorePages = true
-        let currentURL = BASE_URL
-        
+        let currentURL = BASE_URL + type + '/'
+
         let allData = {
             count: 0,
             results: []
@@ -61,5 +61,7 @@ const search = async (searchTerm) => {
         console.log(err)
     }
 }
+
+// console.log(await index('films'))
 
 export { index, search }
