@@ -41,6 +41,16 @@ const EntryCard = ({ entry, type }) => {
                     <p><b>Classification:</b> {entry.classification}</p>
                 </li>
             </>
+        case 'people':
+            return <>
+                <li className="person-card">
+                    <h4>{entry.name}</h4>
+                    <p><b>Gender:</b> {entry.gender}</p>
+                    <p><b>Birth Year:</b> {entry.birth_year}</p>
+                    <p><b>Hair Color:</b> {entry.hair_color}</p>
+                    <p><b>Eye Color:</b> {entry.eye_color}</p>
+                </li>
+            </>
         default:
             return <p>Error...</p>
     }

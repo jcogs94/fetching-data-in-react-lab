@@ -1,9 +1,11 @@
 import EntryCard from "./EntryCard/EntryCard.jsx"
 
 const EntryList = ({ count, entries, type }) => {
+    const title = type.charAt(0).toUpperCase() + type.slice(1)
+    
     return <>
         <section id="entry-list">
-            <h3>Starships</h3>
+            <h3>{title}</h3>
             <p><em>Number of results: {count}</em></p>
             <ul>
                 {entries.map( (entry, index) =>
