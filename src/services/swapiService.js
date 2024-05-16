@@ -30,10 +30,10 @@ const index = async (type) => {
     }
 }
 
-const search = async (searchTerm) => {
+const search = async (type, searchTerm) => {
     try {
         const queryStr = '?search=' + searchTerm
-        const searchURL = BASE_URL + queryStr
+        const searchURL = BASE_URL + type + '/' + queryStr
         let currentURL = searchURL
         let hasMorePages = true
         
@@ -56,6 +56,8 @@ const search = async (searchTerm) => {
             }
         }
         
+        console.log(allData)
+
         return allData
     } catch (err) {
         console.log(err)
