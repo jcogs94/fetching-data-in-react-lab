@@ -24,11 +24,18 @@ const EntryCard = ({ entry, type }) => {
                     <p><b>Climate:</b> {entry.climate}</p>
                 </li>
             </>
+        case 'vehicles':
+            return <>
+                <li className="vehicle-card">
+                    <h4>{entry.name}</h4>
+                    <p><b>Class:</b> {entry.vehicle_class}</p>
+                    <p><b>Manufacturer:</b> {entry.manufacturer}</p>
+                    <p><b>Model:</b> {entry.model}</p>
+                </li>
+            </>
         default:
             return <p>Error...</p>
-
     }
-    
 }
 
 export default EntryCard
