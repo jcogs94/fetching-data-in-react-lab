@@ -33,6 +33,14 @@ const EntryCard = ({ entry, type }) => {
                     <p><b>Model:</b> {entry.model}</p>
                 </li>
             </>
+        case 'species':
+            return <>
+                <li className="species-card">
+                    <h4>{entry.name}</h4>
+                    <p><b>Language:</b> {entry.language}</p>
+                    <p><b>Classification:</b> {entry.classification}</p>
+                </li>
+            </>
         default:
             return <p>Error...</p>
     }
